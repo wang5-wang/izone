@@ -37,7 +37,7 @@ API_FLAG = False
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DUBUG', True))
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'sleepy-sea-31699.herokuapp.com']
 
 # Application definition
 
