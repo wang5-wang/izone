@@ -1,0 +1,41 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block head_title %}关于网站及博主介绍{% endblock %}
+{% block metas %}
+<meta name="description"
+      content="本网站是一个采用django+bootstrap4搭建的个人博客，本着学习和分享的精神，博客项目开源，源代码可以到我的Github中查看，网站建站历程可以查看页面时间线内容。">
+<meta name="keywords" content="网站About页面,关于网站,关于博主,关于站长">
+{% endblock %}
+
+
+{% block base_content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8" style="line-height:2">
+            <div class="card rounded-0 border-0 p-3 f-16">
+                <h2 class="font-weight-bold">关于网站</h2>
+                <hr style="margin: .1rem;dashed #333;"/>
+                <ul class="pl-4 ml-2">
+                    <li>博主 Github 地址：<a href="https://github.com/wang5-wang"
+                                        target="_blank">https://github.com/wang5-wang</a></li>
+                </ul>
+                <h2 class="mt-2 font-weight-bold">关于博客</h2>
+                <hr style="margin: .1rem;dashed #333;"/>
+                <ul class="pl-4 ml-2">
+                    <li>构建博客的部分源码转载自https://github.com/Hopetree/izone</li>
+                </ul>
+                <h2 class="mt-2 font-weight-bold">功能介绍</h2>
+                <hr style="margin: .1rem;dashed #333;"/>
+                <ul class="pl-4 ml-2">
+                    <li>在这个博客里，我主要写下了自己学习，工作过程中遇见的困难和解决方案。</li>
+                    <li>自己学过的一些优秀的书籍和文档，我也会在这里展出</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            {% include 'blog/tags/base_right.html' %}
+        </div>
+    </div>
+</div>
+{% endblock %}
