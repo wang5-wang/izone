@@ -15,6 +15,7 @@ class ToolCategory(models.Model):
     def __str__(self):
         return self.name
 
+
 class ToolLink(models.Model):
     name = models.CharField('网站名称', max_length=20)
     description = models.CharField('网站描述', max_length=100)
@@ -29,5 +30,3 @@ class ToolLink(models.Model):
 
     def __str__(self):
         return self.name
-
-

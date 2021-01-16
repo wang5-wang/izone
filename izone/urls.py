@@ -43,6 +43,7 @@ sitemaps = {
 }
 
 urlpatterns = [
+    
     path('adminx/', admin.site.urls),
     path('accounts/', include('allauth.urls')),  # allauth
     path('accounts/', include(('oauth.urls', 'oauth'), namespace='oauth')),  # oauth,只展现一个用户登录界面
@@ -54,6 +55,7 @@ urlpatterns = [
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # 加入这个才能显示media文件
 
 if settings.API_FLAG:
+    from api.urls import router
     urlpatterns.append(path('api/v1/',include((router.urls, router.root_view_name),namespace='api')))    # restframework
 
 if settings.TOOL_FLAG:
